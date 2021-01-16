@@ -1,0 +1,35 @@
+#User function Template for python3
+
+
+class Solution:
+    def smallestnum (self,N):
+        l=list(str(N))
+        l.sort()
+        s=0
+        for i in range(len(l)):
+            if(l[i]!='0'):
+                s=l[i]
+                l.remove(l[i])
+                break
+        s1=str(s)+"".join(l)
+        return int(s1)
+                
+        
+
+
+
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+
+if __name__ == '__main__': 
+    t = int (input ())
+    for _ in range (t):
+        N = input()
+        ob = Solution()
+        ans = ob.smallestnum(N)
+        print(ans)
+
+# } Driver Code Ends
